@@ -1,0 +1,106 @@
+
+<div class="container">
+
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        
+        <div class="form-group">
+            <label for="description">Product name:</label>
+            <input
+            type="text"
+              class="form-control"
+              id="productname"
+              name="productname"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">Product description:</label>
+            <input
+            type="text"
+              class="form-control"
+              id="description"
+              name="desciption"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">Unit Price :</label>
+            <input
+            type="number"
+              class="form-control"
+              id="date"
+              name="unit_price"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">Product imageurl:</label>
+            <input
+            type="text"
+              class="form-control"
+              id="name"
+              name="imageurl"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description"> units_in_stock</label>
+            <input
+            type="number"
+              class="form-control"
+              id="mid"
+              name="units_in_stock"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">price</label>
+            <input
+            type="number"
+              class="form-control"
+              id="sal"
+              name="salary"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">datecreated</label>
+            <input
+            type="number"
+              class="form-control"
+              id="datecreated"
+              name="datecreated"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">lastUpdated</label>
+            <input
+            type="number"
+              class="form-control"
+              id="datecreated"
+              name="lastUpdated"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">category Id</label>
+            <input
+            type="number"
+              class="form-control"
+              id="categoryId"
+              name="categoryId"
+            />
+          </div>
+         
+  
+        <button (click)="saveProduct()" class="btn btn-success">Submit</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>Product was submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newProduct()">Add</button>
+        &nbsp;
+        <a routerLink="/Home" class="btn btn-success" >Back to Home</a>
+        &nbsp;
+        <a routerLink="/products" class="btn btn-success" >Show Products</a>
+        
+      </div>
+    </div>
+  </div>
+
+
+  
